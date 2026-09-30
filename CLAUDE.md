@@ -33,16 +33,7 @@ python -m http.server 5500
 Never push before Ahmed has seen and approved the change.
 
 ## Content rules
-- Only list a skill on the site after Ahmed says he has learned it (he is currently learning Power BI, Excel, Tableau)
+- Only list a skill on the site after Ahmed confirms it
 - No public email on the site for now; contact is via LinkedIn and GitHub
 - Do not feature his old basic HTML repos (`html_Resume`, `html-portfolio`)
 - Use the passport spelling "Algaoni" everywhere (his LinkedIn URL still says `aljawni`)
-
-## Environment notes
-- On his machine `gh` is not on PATH in the terminal; use `& "C:\Program Files\GitHub CLI\gh.exe"`
-- Claude Code cannot create public repos in auto mode; Ahmed runs those commands himself
-
-## Working with Ahmed
-- He is a beginner learning to build with Claude: chat in Arabic, code and comments in English
-- Explain each step in Arabic: what we did, why, and how it works
-- Build in small steps; end explanations with a possible interview question when relevant
