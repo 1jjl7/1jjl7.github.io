@@ -49,6 +49,51 @@ ul {
   list-style: none;
 }
 
+/* Keyboard focus ring: shows only when you navigate with Tab (not on mouse
+   clicks), so keyboard users can always see where they are on the page */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* ===== Icons (inline SVG, drawn with lines in the current text colour) ===== */
+.icon {
+  width: 1.25em;
+  height: 1.25em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: -0.25em; /* line the icon up with the text next to it */
+}
+
+.menu-toggle .icon {
+  display: block; /* no extra gap under the icon inside the button */
+}
+
+.cert .icon {
+  color: var(--accent);
+  margin-right: 0.35rem;
+}
+
+/* ===== Skip link: hidden above the screen until it gets keyboard focus ===== */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1rem;
+  z-index: 200; /* above the navbar (z-index 100) */
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 /* ===== Navbar ===== */
 .navbar {
   position: fixed;
@@ -94,7 +139,9 @@ ul {
   border-radius: 8px;
   color: var(--text);
   font-size: 1.4rem;
-  padding: 0.2rem 0.7rem;
+  padding: 0.2rem 0;
+  min-width: 44px;  /* 44x44px is the minimum comfortable size for a thumb tap */
+  min-height: 44px;
   cursor: pointer;
 }
 
@@ -440,5 +487,28 @@ main {
 
   .timeline-item::before {
     left: calc(-1.5rem - 7px);
+  }
+}
+
+/* ===== Reduced motion =====
+   Some people turn on "reduce motion" in their system settings (it can make
+   them dizzy). When they do, we switch off scrolling and sliding animations. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; /* jump to sections instead of gliding */
+  }
+
+  /* show sections right away: no fade-in, no sliding up */
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  /* cards and buttons keep their colour change on hover, but don't move */
+  .btn:hover,
+  .skill-card:hover,
+  .project-card:hover {
+    transform: none;
   }
 }

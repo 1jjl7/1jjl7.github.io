@@ -5,15 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ahmed Maher Algaoni — Computer Science senior and Data Analyst skilled in Python and SQL.">
   <title>Ahmed Maher Algaoni | Data Analyst</title>
+
+  <!-- Tab icon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0a0e17">
+
+  <!-- Link preview when the site is shared (LinkedIn, WhatsApp, ...) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahmed Maher Algaoni | Data Analyst">
+  <meta property="og:description" content="Computer Science senior and Data Analyst skilled in Python and SQL.">
+  <meta property="og:url" content="https://1jjl7.github.io/">
+  <meta property="og:image" content="https://1jjl7.github.io/og-image.png">
+  <meta property="og:image:alt" content="Ahmed Maher Algaoni, Data Analyst, Python and SQL">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 
+  <!-- First Tab press shows this link so keyboard users can skip the menu -->
+  <a href="#main" class="skip-link">Skip to content</a>
+
   <!-- ===== Navigation bar ===== -->
   <header class="navbar">
     <a href="#home" class="logo">&lt;Ahmed /&gt;</a>
-    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <!-- three-line "hamburger" icon; aria-hidden because the button already has a label -->
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
     <nav>
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -25,7 +47,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- ===== Hero: first thing visitors see ===== -->
     <section id="home" class="hero">
@@ -138,7 +160,13 @@
       </div>
 
       <p class="cert">
-        🎓 Certificate: <strong>Building a Generative AI-Ready Organization</strong> — Simplilearn (2026)
+        <!-- graduation cap icon (shape from Lucide, ISC license: https://lucide.dev) -->
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+          <path d="M22 10v6" />
+          <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+        </svg>
+        Certificate: <strong>Building a Generative AI-Ready Organization</strong> — Simplilearn (2026)
       </p>
     </section>
 
@@ -192,6 +220,7 @@
             <li>CSS</li>
             <li>JavaScript</li>
           </ul>
+          <a href="https://github.com/1jjl7/1jjl7.github.io" target="_blank" rel="noopener">View Code →</a>
         </article>
 
       </div>
